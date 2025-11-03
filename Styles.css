@@ -24,3 +24,19 @@ label, select, input[type="checkbox"] {
     display: block;
     margin: 10px 0;
 }
+
+button {
+    background-color: #d94f4f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ouput {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 8px;
+}
