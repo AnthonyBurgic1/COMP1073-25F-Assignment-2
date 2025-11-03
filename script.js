@@ -14,5 +14,10 @@ class Smoothie {
     }
 
     // Let's Calculate the total price of the smoothies \\ 
-    
+    calculatePrice() {
+        let total = this.prices.size[this.size] + this.prices.base[this.base];
+        total += this.fruits.length * this.prices.fruit;
+        if (this.extras) total += this.prices.extras[this.extras] || 0;
+        return total.toFixed(2);
+    }
 }
