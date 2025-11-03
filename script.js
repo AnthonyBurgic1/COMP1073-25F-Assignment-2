@@ -20,4 +20,16 @@ class Smoothie {
         if (this.extras) total += this.prices.extras[this.extras] || 0;
         return total.toFixed(2);
     }
+
+    // Display the smoothie description \\
+    describe() {
+        return `
+      <h2>Your Smoothie Summary</h2>
+      <p><strong>Size:</strong> ${this.size}</p>
+      <p><strong>Base:</strong> ${this.base}</p>
+      <p><strong>Fruits:</strong> ${this.fruits.join(", ") || "None"}</p>
+      <p><strong>Extras:</strong> ${this.extras || "None"}</p>
+      <p><strong>Total Price:</strong> $${this.calculatePrice()}</p>
+    `;
+    }
 }
