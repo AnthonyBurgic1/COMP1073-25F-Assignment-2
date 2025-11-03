@@ -13,7 +13,7 @@ class Smoothie {
         };
     }
 
-    // Let's Calculate the total price of the smoothies \\ 
+// Let's Calculate the total price of the smoothies \\ 
     calculatePrice() {
         let total = this.prices.size[this.size] + this.prices.base[this.base];
         total += this.fruits.length * this.prices.fruit;
@@ -21,7 +21,7 @@ class Smoothie {
         return total.toFixed(2);
     }
 
-    // Display the smoothie description \\
+// Display the smoothie description \\
     describe() {
         return `
       <h2>Your Smoothie Summary</h2>
@@ -38,15 +38,15 @@ class Smoothie {
 document.getElementById("smoothieForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Get form values \\
+// Get form values \\
     const size = document.getElementById("size").value;
     const base = document.getElementById("base").value;
      const extras = document.getElementById("extras").value;
     const fruits = Array.from(document.querySelectorAll("input[name='fruits']:checked")).map(f => f.value);
    
-    // Create a Smoothie object \\ 
+// Create a Smoothie object \\ 
     const smoothie = new Smoothie(size, base, fruits, extras);
 
-    // Let's Output the Description \\ 
+// Let's Output the Description \\ 
     document.getElementById("output").innerHTML = smoothie.description();
 });
