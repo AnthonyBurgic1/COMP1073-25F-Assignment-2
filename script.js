@@ -33,3 +33,20 @@ class Smoothie {
     `;
     }
 }
+
+// Lets handle the form submission \\
+document.getElementById("smoothieForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values \\
+    const size = document.getElementById("size").value;
+    const base = document.getElementById("base").value;
+     const extras = document.getElementById("extras").value;
+    const fruits = Array.from(document.querySelectorAll("input[name='fruits']:checked")).map(f => f.value);
+   
+    // Create a Smoothie object \\ 
+    const smoothie = new Smoothie(size, base, fruits, extras);
+
+    // Let's Output the Description \\ 
+    document.getElementById("output").innerHTML = smoothie.description();
+});
