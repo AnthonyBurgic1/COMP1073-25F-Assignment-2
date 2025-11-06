@@ -5,26 +5,26 @@ class Smoothie {
     this.fruits = fruits;
     this.extras = extras;
 
-    // Price list
+    // Price list \\
     this.prices = {
       size: { small: 3, medium: 5, large: 7 },
       base: { milk: 1, "almond milk": 1.5, yogurt: 2 },
       extras: { protein: 2, chia: 1, honey: 0.5 },
-      fruit: 1 // each fruit = $1
+      fruit: 1 // each fruit = $1 \\ 
     };
   }
 
   calculatePrice() {
     let total = 0;
 
-    // Add size + base price
+    // Add size + base price \\ 
     total += this.prices.size[this.size];
     total += this.prices.base[this.base];
 
-    // Add fruits
+    // Add fruits \\ 
     total += this.fruits.length * this.prices.fruit;
 
-    // Add extras (if selected)
+    // Add extras (if selected) \\ 
     if (this.extras && this.extras !== "none") {
       total += this.prices.extras[this.extras] || 0;
     }
@@ -65,7 +65,7 @@ smoothieForm.addEventListener("submit", function(event) {
 
   output.innerHTML = smoothie.describe();
 
-  // Add to order history list
+  // Add to order history list \\ 
   const li = document.createElement("li");
   li.textContent = `${smoothie.size} smoothie with ${smoothie.base}, fruits: [${smoothie.fruits.join(", ")}], extra: ${smoothie.extras} — $${smoothie.calculatePrice()}`;
   orderHistory.appendChild(li);
@@ -85,10 +85,10 @@ function updateLivePrice() {
   liveTotal.textContent = `$${tempSmoothie.calculatePrice()}`;
 }
 
-// Trigger update whenever inputs change
+// Trigger update whenever inputs change \\ 
 document.querySelectorAll("#size, #base, #extras, input[name='fruits']").forEach(input => {
   input.addEventListener("change", updateLivePrice);
 });
 
-// Initialize live price on page load
+// Initialize live price on page load \\
 updateLivePrice();
