@@ -1,105 +1,48 @@
-/* Base Styles */
+/* In here i will store all my styles for my smoothie machine */
 body {
-  margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  color: #222;
-  line-height: 1.6;
-  background-color: #f5fdf7;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fdf6f0;
+    color: #333;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
 }
 
-/* Header */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #5F9A76;
-  color: #fff;
+h1 {
+    text-align: center;
+    color: #d94f4f;
 }
 
-.site-header .logo img {
-  max-height: 60px;
+form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
+label, select, input[type="checkbox"] {
+    display: block;
+    margin: 10px 0;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
+button {
+    background-color: #d94f4f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.nav a:hover {
-  color: #7ED49D;
+#ouput {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f5e9;
+    border-radius: 8px;
 }
 
-/* Hero Section */
-.hero {
-  grid-column: 1 / -1;
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #7ED49D;
-  color: #000;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-.hero .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #5F9A76;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.hero .btn:hover {
-  background-color: #4c7b5e;
-}
-
-/* Grid Layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.content img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
-.site-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #222;
-  color: #fff;
-}
-
-.site-footer a {
-  color: #7ED49D;
-  text-decoration: none;
+img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
 }
