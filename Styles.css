@@ -3,46 +3,51 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #fdf6f0;
     color: #333;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.container {
     max-width: 600px;
-    margin: auto;
+    width: 100%;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     color: #d94f4f;
 }
 
 form {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    text-align: left;
 }
 
 label, select, input[type="checkbox"] {
-    display: block;
     margin: 10px 0;
+    width: 100%;
 }
 
 button {
+    width: 100%;
+    margin-top: 15px;
     background-color: #d94f4f;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
-
-#ouput {
-    margin-top: 20px;
-    padding: 15px;
-    background: #e8f5e9;
-    border-radius: 8px;
+button:hover {
+    background-color: #bf3f3f;
 }
 
-img {
-    max-width: 100%;
-    margin-top: 10px;
-    border-radius: 8px;
+#output {
+    margin-top: 25px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 10px;
 }
