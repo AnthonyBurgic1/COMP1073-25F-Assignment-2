@@ -2,56 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <tittle>The Smoothie Machine</tittle>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Smoothie Machine</title>
     <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
+
 <div class="container">
-    <h1>Build Your Smoothie</h1>
+    <h1>The Smoothie Machine</h1>
 
-    <!--Smootthie Order Form-->
+    <!-- Smoothie Order Form -->
     <form id="smoothieForm">
+        
+        <label for="size">Choose a size</label>
+        <select id="size" name="size">
+            <option value="small">Small $3.00</option>
+            <option value="medium">Medium $5.25</option>
+            <option value="large">Large $8.50</option>
+        </select>
 
-    <label for="size">Choose a size</label>
-    <selcet id="size" name="size">
-        <option value="Small">Small $3.00</option>
-        <option value="Medium">Medium $5.25</option>
-        <option value="Large">Large $8.50</option>
-    </selcet>
+        <label for="base">Choose a base</label>
+        <select id="base" name="base">
+            <option value="milk">Milk $1.25</option>
+            <option value="almond milk">Almond Milk $2.25</option>
+            <option value="yogurt">Yogurt $3.25</option>
+        </select>
 
-    <label for="base">Choose a base</label>
-    <select id="base" name="base">
-        <option value="milk">Milk $1.25</option>
-        <option value="almond milk">Almond Milk $2.25</option>
-        <option value="yogurt">Yogurt $3.25</option>
-    </select>
+        <fieldset>
+            <legend>Choose fruits ($1 each)</legend>
+            <label><input type="checkbox" name="fruits" value="banana"> Banana</label>
+            <label><input type="checkbox" name="fruits" value="strawberry"> Strawberry</label>
+            <label><input type="checkbox" name="fruits" value="blueberry"> Blueberry</label>
+            <label><input type="checkbox" name="fruits" value="mango"> Mango</label>
+        </fieldset>
 
-    <fieldset>
-        <legend>Choose fruits ($1.00 Each)</legend>
-        <label><input type="checkbox" name="fruits" value="banana" />Banana</label>
-        <label><input type="checkbox" name="fruits" value="strawberry" />Strawberry</label>
-        <label><input type="checkbox" name="fruits" value="blueberry" />Blueberry</label>
-        <label><input type="checkbox" name="fruits" value="mango" />Mango</label>
-    </fieldset>
+        <label for="extras">Add Extras</label>
+        <select id="extras" name="extras">
+            <option value="">None</option>
+            <option value="protein">Protein Powder ($2.25)</option>
+            <option value="chia">Chia Seeds ($1.25)</option>
+            <option value="honey">Honey ($2.50)</option>
+        </select>
 
-    <label for="extras">Add Extras</label>
-<select id="extras" name="extras">
-    <option value="">None</option>
-    <option value="protein">Protein Powder ($2.25)</option>
-    <option value="chia">Chia Seeds ($1.25)</option>
-    <option value="honey">Honey ($2.50)</option>
-</select>
+        <button type="submit">Create My Smoothie</button>
+    </form>
 
-
-    <button type="submit">Create My Smoothie</button>
-</form>
-
-    <!--Output Section-->
+    <!-- Output Section -->
     <div id="output"></div>
-    
+
 </div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
